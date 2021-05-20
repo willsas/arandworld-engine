@@ -1,0 +1,6 @@
+framework module Pods_arandworld_engine_arandworld_engineTests {
+  umbrella header "Pods-arandworld-engine-arandworld-engineTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
