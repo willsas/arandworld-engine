@@ -29,5 +29,8 @@ class arandworld_engineTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testEnvironment() {
+    }
 
 }

@@ -18,6 +18,7 @@ public class ArandWorldCore {
     public func initiate(_ appDelegate: UIApplication) {
         self.appDelegate = appDelegate
         configureAmplify()
+        Environment.shared.configure()
     }
     
     private func configureAmplify(){
@@ -25,7 +26,7 @@ public class ArandWorldCore {
             try Amplify.add(plugin: AWSCognitoAuthPlugin())
             try Amplify.add(plugin: AWSS3StoragePlugin())
             try Amplify.configure()
-            print("Success configure aws")
+            print("Success configure aws, with env \(Environment.shared.status)")
         } catch let err {
             print("Failed configure aws: \(err)")
         }
