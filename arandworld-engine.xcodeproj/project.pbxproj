@@ -44,6 +44,12 @@
 		BE39D087265662A30032A1A1 /* ArandWorldCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArandWorldCore.swift; sourceTree = "<group>"; };
 		BE39D0EE2656C2EE0032A1A1 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		BEDB3153265C076E00C8D6E2 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		BEDB31A3265C0E2000C8D6E2 /* FactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryProtocol.swift; sourceTree = "<group>"; };
+		BEDB31A4265C0E3D00C8D6E2 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		BEDB31A5265C0F6300C8D6E2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BEDB31A6265C0FC800C8D6E2 /* URLSessionNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkService.swift; sourceTree = "<group>"; };
+		BEDB31B6265C113B00C8D6E2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		BEDB31B9265C11C500C8D6E2 /* AmplifyAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyAuthService.swift; sourceTree = "<group>"; };
 		CE6F1203417AF6F45D28E23D /* Pods-arandworld-engine.debug prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arandworld-engine.debug prod.xcconfig"; path = "Target Support Files/Pods-arandworld-engine/Pods-arandworld-engine.debug prod.xcconfig"; sourceTree = "<group>"; };
 		D44841D0232C91CBFB0E69DA /* Pods-arandworld-engine-arandworld-engineTests.debug stag.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arandworld-engine-arandworld-engineTests.debug stag.xcconfig"; path = "Target Support Files/Pods-arandworld-engine-arandworld-engineTests/Pods-arandworld-engine-arandworld-engineTests.debug stag.xcconfig"; sourceTree = "<group>"; };
 		DE00ACCE61EE66E2360AFB60 /* Pods-arandworld-engine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arandworld-engine.debug.xcconfig"; path = "Target Support Files/Pods-arandworld-engine/Pods-arandworld-engine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,10 +130,10 @@
 		BE190C172653A47D00BF4A5A /* arandworld-engine */ = {
 			isa = PBXGroup;
 			children = (
+				BEDB31A2265C0E0400C8D6E2 /* Main */,
 				BEDB314A265C060800C8D6E2 /* Configs */,
 				BE39D08B265663550032A1A1 /* Service */,
 				BE190C182653A47D00BF4A5A /* arandworld_engine.h */,
-				BE39D087265662A30032A1A1 /* ArandWorldCore.swift */,
 			);
 			path = "arandworld-engine";
 			sourceTree = "<group>";
@@ -144,6 +150,8 @@
 		BE39D08B265663550032A1A1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BEDB31B8265C11B200C8D6E2 /* Auth */,
+				BEDB31B7265C11A600C8D6E2 /* Network */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -155,6 +163,34 @@
 				BEDB3153265C076E00C8D6E2 /* Environment.swift */,
 			);
 			name = Configs;
+			sourceTree = "<group>";
+		};
+		BEDB31A2265C0E0400C8D6E2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BE39D087265662A30032A1A1 /* ArandWorldCore.swift */,
+				BEDB31A3265C0E2000C8D6E2 /* FactoryProtocol.swift */,
+				BEDB31A4265C0E3D00C8D6E2 /* DependencyContainer.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BEDB31B7265C11A600C8D6E2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB31A5265C0F6300C8D6E2 /* NetworkService.swift */,
+				BEDB31A6265C0FC800C8D6E2 /* URLSessionNetworkService.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		BEDB31B8265C11B200C8D6E2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB31B6265C113B00C8D6E2 /* AuthService.swift */,
+				BEDB31B9265C11C500C8D6E2 /* AmplifyAuthService.swift */,
+			);
+			name = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

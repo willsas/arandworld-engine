@@ -12,13 +12,12 @@ import AmplifyPlugins
 public class ArandWorldCore {
     
     public static let shared = ArandWorldCore()
-    
     private var appDelegate: UIApplication?
+    private var dependency = DependencyContainer(networkService: URLSessionNetworkService())
     
     public func initiate(_ appDelegate: UIApplication) {
         self.appDelegate = appDelegate
         configureAmplify()
-        Environment.shared.configure()
     }
     
     private func configureAmplify(){
