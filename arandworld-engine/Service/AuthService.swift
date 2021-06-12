@@ -8,15 +8,11 @@
 import Foundation
 
 public protocol AuthService {
-    var isSignIn: String? { get }
     var user: String? { get }
-    var authDelegate: AuthServiceDelegate? { get set }
-    func signIn(username: String, password: String)
-    func signUp(username: String, password: String, email: String)
-    func confirmSignUp(username: String, code: String)
-}
-
-public protocol AuthServiceDelegate: class {
-    func onLogin(onError: Error?)
+    func isLoggedIn(completion: @escaping (Result<Bool, ARWError.ARWAuthError>) -> Void)
+    func signIn(username: String, password: String, completion: @escaping (Result<Bool, ARWError.ARWAuthError>) -> Void)
+    func signUp(username: String, password: String, email: String, completion: @escaping (Result<Bool, ARWError.ARWAuthError>) -> Void)
+    func confirmSignUp(username: String, code: String, completion: @escaping (Result<Bool, ARWError.ARWAuthError>) -> Void)
+    func signOut(completion: @escaping (Result<Bool, ARWError.ARWAuthError>) -> Void)
 }
 

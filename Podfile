@@ -6,11 +6,11 @@ target 'arandworld-engine' do
   use_frameworks!
   
   # Pods for arandworld-engine
+  pod 'ArandworldEngine', :path => '.'
     
-  pod 'Amplify'
-  pod 'AmplifyPlugins/AWSS3StoragePlugin'
-  pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
-  
+#  pod 'Amplify'
+#  pod 'AmplifyPlugins/AWSS3StoragePlugin'
+#  pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
   target 'arandworld-engineTests' do
     # Pods for testing
   end

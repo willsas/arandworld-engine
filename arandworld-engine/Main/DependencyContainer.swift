@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class DependencyContainer {
+final class DependencyContainer {
     
     private let networkService: NetworkService
     
@@ -20,5 +20,14 @@ public final class DependencyContainer {
 extension DependencyContainer: AuthFactory {
     public func createAuthService() -> AuthService {
         return AmplifyAuthService()
+    }
+}
+
+
+extension DependencyContainer: NetworkSession {
+    var userNetworkSession: UserNetworkSessionService {
+        get {
+            return AWSUserNetworkSession()
+        }
     }
 }

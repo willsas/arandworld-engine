@@ -10,3 +10,9 @@ import Foundation
 protocol AuthFactory {
     func createAuthService() -> AuthService
 }
+
+protocol NetworkSession {
+    var userNetworkSession: UserNetworkSessionService { get }
+}
+
+
